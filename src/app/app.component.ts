@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {Word} from "./interfaces/word";
+import { Component, OnInit} from '@angular/core';
+import {Word} from './interfaces/word';
 
 @Component({
   selector: 'app-root',
@@ -88,6 +88,9 @@ export class AppComponent implements OnInit {
   }
 
   checkLetter = (letter: string) => {
+    if (letter === '' || letter === undefined) {
+      return alert('Introduce una letra');
+    }
     let letterIsCorrect = this.solution.includes(letter);
     if (!letterIsCorrect) {
       this.wrongLetters.push(letter);
