@@ -2,6 +2,31 @@
   border: 2px #ccc dashed;
   width: 40rem;
   height: 10rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  .hangman__img{
+    width: 8rem;
+    height: 8rem;
+  }
+  .hangman__mistakes{
+    display: flex;
+    gap: 1rem;
+    .mistakes__letter{
+      font-size: 2rem;
+      position: relative;
+      .mistakes__letter--line{
+        position: absolute;
+        top: 1.2rem;
+        right: -0.6rem;
+        transform: rotate(-45deg);
+        width: 200%;
+        height: 1px;
+        background: red;
+      }
+    }
+  }
 }
 
 .clue{
@@ -10,6 +35,22 @@
   height: 5rem;
   padding: 1rem;
   border-radius: 0.3rem;
+}
+
+.solution{
+  width: 40rem;
+  height: 2rem;
+  padding: 1rem;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+.solution__div {
+  width: 4rem;
+  height: 1.5rem;
+  display: flex;
+  place-content: center;
+  border-bottom: 2px solid #ccc;
 }
 
 .check-input{
@@ -26,3 +67,5 @@
   border-radius: 0.3rem;
   cursor: pointer;
 }
+
+

@@ -1,5 +1,5 @@
 export interface Word {
-  id?: number;
+  id: number;
   name: string;
   clue: string;
 }

@@ -1,14 +1,11 @@
 <h1>El juego del ahorcado</h1>
 <div class="hangman">
-  <div class="hangman__img">
-    <img src="" alt="" class="mistake-one">
-    <img src="" alt="" class="mistake-two">
-    <img src="" alt="" class="mistake-three">
-    <img src="" alt="" class="mistake-four">
-    <img src="" alt="" class="mistake-five">
-    <img src="" alt="" class="mistake-six">
-  </div>
-  <div class="hangman__characteres">
+  <img class="hangman__img" src="assets/hangman-attempt-{{counterWrongLetters}}.svg" alt="Ahorcado" *ngIf="counterWrongLetters">
+  <div class="hangman__mistakes">
+    <div class="mistakes__letter" *ngFor="let letter of wrongLetters">
+      <p>{{letter}}</p>
+      <span class="mistakes__letter--line"></span>
+    </div>
   </div>
 </div>
 <div class="clue">
@@ -16,7 +13,9 @@
   <p>{{clue}}</p>
 </div>
 <div class="solution">
-  <p class="solution__text">{{solution}}</p>
+  <div class="solution__div" *ngFor="let letter of correctLetters" >
+    <p class="solution__letter">{{letter}}</p>
+  </div>
 </div>
-<input class="check-input" type="text" maxlength="1" placeholder="Introduce una letra">
-<button class="check-button">Probar letra</button>
+<input class="check-input" id="input-letter" #letterInput type="text" maxlength="1" placeholder="Introduce una letra">
+<button class="check-button" (click)="checkLetter(letterInput.value.toUpperCase())">Probar letra</button>
