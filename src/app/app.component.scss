@@ -1,0 +1,28 @@
+.hangman{
+  border: 2px #ccc dashed;
+  width: 40rem;
+  height: 10rem;
+}
+
+.clue{
+  background: #FFF375;
+  width: 40rem;
+  height: 5rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.check-input{
+  width: 20rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+  padding: 0 1rem;
+}
+
+.check-button{
+  background: black;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
