@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import hangmanWords from './hangman-words.json';
 import {Word} from './interfaces/word';
 
 @Component({
@@ -6,6 +7,7 @@ import {Word} from './interfaces/word';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent implements OnInit {
   title = 'popular-games-katas';
   clue: string = '';
@@ -14,64 +16,18 @@ export class AppComponent implements OnInit {
   wrongLetters: string[] = [];
   counterCorrectLetters: number = 0;
   counterWrongLetters: number = 0;
-  arrayWords: Word[] = [
-    {
-      "id": 1,
-      "name": "perro",
-      "clue": "El mejor amigo del hombre"
-    },
-    {
-      "id": 2,
-      "name": "gato",
-      "clue": "Algún día se harán con el mundo"
-    },
-    {
-      "id": 3,
-      "name": "caballo",
-      "clue": "El animal más rápido del mundo"
-    },
-    {
-      "id": 4,
-      "name": "elefante",
-      "clue": "El animal más grande del mundo"
-    },
-    {
-      "id": 5,
-      "name": "jirafa",
-      "clue": "El animal más alto del mundo"
-    },
-    {
-      "id": 6,
-      "name": "tigre",
-      "clue": "El animal más peligroso del mundo"
-    },
-    {
-      "id": 7,
-      "name": "león",
-      "clue": "El animal más valiente del mundo"
-    },
-    {
-      "id": 8,
-      "name": "oso",
-      "clue": "El animal más fuerte del mundo"
-    },
-    {
-      "id": 9,
-      "name": "mono",
-      "clue": "El animal más inteligente del mundo"
-    },
-    {
-      "id": 10,
-      "name": "ballena",
-      "clue": "El animal más grande del mundo"
-    }
-  ]
+  arrayWords: Word[] = hangmanWords;
   randomNumber: number = Math.floor(Math.random() * 10) + 1;
-  word: Word = this.arrayWords[this.randomNumber];
+  generateRandomNumber = (maxNumber: number) => {
+    return Math.floor(Math.random() * maxNumber) + 1;
+  }
+
+  word: Word = this.arrayWords[this.generateRandomNumber(this.arrayWords.length)];
 
   takeClue() {
     this.clue = this.word.clue;
   }
+
   resetInputValue() {
     let inputLetter = document.getElementById('input-letter') as HTMLInputElement;
     inputLetter.value = '';
@@ -80,7 +36,6 @@ export class AppComponent implements OnInit {
   takeSolution() {
     let name = this.word.name.toUpperCase();
     this.solution = name.split('');
-    console.log(this.solution);
   }
 
   takeCorrectLettersLength() {
@@ -131,7 +86,6 @@ export class AppComponent implements OnInit {
       this.newGame();
     }
   }
-
 
   ngOnInit(): void {
     this.takeClue();

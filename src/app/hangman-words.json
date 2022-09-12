@@ -1,0 +1,201 @@
+[{
+  "id": 1,
+  "name": "perro",
+  "clue": "El mejor amigo del hombre"
+},{
+  "id": 2,
+  "name": "gato",
+  "clue": "Algún día se harán con el mundo"
+},{
+  "id": 3,
+  "name": "caballo",
+  "clue": "El animal más rápido del mundo"
+},{
+  "id": 4,
+  "name": "elefante",
+  "clue": "El animal más grande del mundo"
+},{
+  "id": 5,
+  "name": "jirafa",
+  "clue": "El animal más alto del mundo"
+},{
+  "id": 6,
+  "name": "tigre",
+  "clue": "El animal más peligroso del mundo"
+},{
+  "id": 7,
+  "name": "león",
+  "clue": "El animal más valiente del mundo"
+},{
+  "id": 8,
+  "name": "oso",
+  "clue": "El animal más fuerte del mundo"
+},{
+  "id": 9,
+  "name": "mono",
+  "clue": "El animal más inteligente del mundo"
+},{
+  "id": 10,
+  "name": "ballena",
+  "clue": "El animal más grande del mundo"
+},{
+  "id": 11,
+  "name": "pingüino",
+  "clue": "El animal más gracioso del mundo"
+},{
+  "id": 12,
+  "name": "ratón",
+  "clue": "El animal más pequeño del mundo"
+},{
+  "id": 13,
+  "name": "rana",
+  "clue": "El animal más verde del mundo"
+},{
+  "id": 14,
+  "name": "serpiente",
+  "clue": "El animal más venenoso del mundo"
+},{
+  "id": 15,
+  "name": "tortuga",
+  "clue": "El animal más lento del mundo"
+},{
+  "id": 16,
+  "name": "vaca",
+  "clue": "El animal más lechero del mundo"
+},{
+  "id": 17,
+  "name": "zorro",
+  "clue": "El animal más astuto del mundo"
+},{
+  "id": 18,
+  "name": "canguro",
+  "clue": "El animal más saltarín del mundo"
+},{
+  "id": 19,
+  "name": "cangrejo",
+  "clue": "El animal más duro del mundo"
+},{
+  "id": 20,
+  "name": "camello",
+  "clue": "El animal más resistente del mundo"
+},{
+  "id": 21,
+  "name": "canguro",
+  "clue": "El animal más saltarín del mundo"
+},{
+  "id": 22,
+  "name": "cangrejo",
+  "clue": "El animal más duro del mundo"
+},{
+  "id": 23,
+  "name": "camello",
+  "clue": "El animal más resistente del mundo"
+},{
+  "id": 24,
+  "name": "canguro",
+  "clue": "El animal más saltarín del mundo"
+},{
+  "id": 25,
+  "name": "mantequilla",
+  "clue": "Grasa saturada procedente de la leche de vaca."
+},{
+  "id": 26,
+  "name": "queso",
+  "clue": "Producto lácteo obtenido por la maduración de la cuajada de la leche."
+},{
+  "id": 27,
+  "name": "leche",
+  "clue": "Líquido blanco, graso y dulce que produce la glándula mamaria de las vacas."
+},{
+  "id": 28,
+  "name": "yogur",
+  "clue": "Producto lácteo obtenido por la fermentación de la leche."
+},{
+  "id": 29,
+  "name": "ordenador",
+  "clue": "Dispositivo electrónico que permite almacenar y procesar información."
+},{
+  "id": 30,
+  "name": "teclado",
+  "clue": "Dispositivo de entrada de datos que permite introducir información en un ordenador."
+},{
+  "id": 31,
+  "name": "ratón",
+  "clue": "Dispositivo de entrada de datos que permite introducir información en un ordenador."
+},{
+  "id": 32,
+  "name": "pantalla",
+  "clue": "Dispositivo de salida de datos que permite visualizar información en un ordenador."
+},{
+  "id": 33,
+  "name": "impresora",
+  "clue": "Dispositivo de salida de datos que permite imprimir información en un ordenador."
+},{
+  "id": 34,
+  "name": "escritorio",
+  "clue": "Área de trabajo en un ordenador."
+},{
+  "id": 35,
+  "name": "casa",
+  "clue": "Lugar donde viven las personas."
+},{
+  "id": 36,
+  "name": "coche",
+  "clue": "Vehículo de cuatro ruedas que permite desplazarse."
+},{
+  "id": 37,
+  "name": "bicicleta",
+  "clue": "Vehículo de dos ruedas que permite desplazarse."
+},{
+  "id": 38,
+  "name": "avión",
+  "clue": "Vehículo que permite desplazarse por el aire."
+},{
+  "id": 39,
+  "name": "barco",
+  "clue": "Vehículo que permite desplazarse sobre el agua."
+},{
+  "id": 40,
+  "name": "tren",
+  "clue": "Vehículo que permite desplazarse sobre el ferrocarril."
+},{
+  "id": 41,
+  "name": "metro",
+  "clue": "Vehículo que permite desplazarse sobre el ferrocarril."
+},{
+  "id": 42,
+  "name": "autobús",
+  "clue": "Vehículo que permite desplazarse sobre el asfalto."
+},{
+  "id": 43,
+  "name": "patinete",
+  "clue": "Vehículo que permite desplazarse sobre el asfalto."
+},{
+  "id": 44,
+  "name": "moto",
+  "clue": "Vehículo que permite desplazarse sobre el asfalto."
+},{
+  "id": 45,
+  "name": "piscina",
+  "clue": "Lugar donde se puede nadar."
+},{
+  "id": 46,
+  "name": "playa",
+  "clue": "Lugar donde se puede bañar."
+},{
+  "id": 47,
+  "name": "mar",
+  "clue": "Lugar donde se puede bañar."
+},{
+  "id": 48,
+  "name": "montaña",
+  "clue": "Lugar donde se puede hacer senderismo."
+},{
+  "id": 49,
+  "name": "bosque",
+  "clue": "Lugar donde se puede hacer senderismo."
+},{
+  "id": 50,
+  "name": "río",
+  "clue": "Lugar donde se puede nada."
+}]
