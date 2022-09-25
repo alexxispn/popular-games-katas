@@ -21,4 +21,4 @@
 <input class="check-input" id="input-letter" #letterInput (keyup.enter)="checkLetter(letterInput.value.toUpperCase())"
        type="text"
        maxlength="1" placeholder="Introduce una letra">
-<button class="check-button" (click)="checkLetter(letterInput.value.toUpperCase())">Probar letra</button>
+<button class="check-button" (click)="checkLetter(letterInput.value)">Probar letra</button>

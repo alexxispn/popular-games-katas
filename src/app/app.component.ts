@@ -33,12 +33,12 @@ export class AppComponent implements OnInit {
     inputLetter.value = '';
   }
 
-  takeSolution() {
+  getSolution() {
     let name = this.word.name.toUpperCase();
     this.solution = name.split('');
   }
 
-  takeCorrectLettersLength() {
+  getCorrectLettersLength() {
     this.correctLetters.length = this.solution.length;
   }
 
@@ -46,6 +46,7 @@ export class AppComponent implements OnInit {
     if (letter === '' || letter === undefined) {
       return alert('Introduce una letra');
     }
+    letter = letter.toUpperCase();
     let letterIsCorrect = this.solution.includes(letter);
     if (!letterIsCorrect) {
       this.wrongLetters.push(letter);
@@ -60,11 +61,11 @@ export class AppComponent implements OnInit {
         this.counterCorrectLetters++;
       }
     }
-    this.checkIfGameIsOver();
+    this.isGameOver();
     this.resetInputValue();
   }
 
-  newGame() {
+  setNewGame() {
     this.counterCorrectLetters = 0;
     this.counterWrongLetters = 0;
     this.correctLetters = [];
@@ -72,24 +73,24 @@ export class AppComponent implements OnInit {
     this.randomNumber = Math.floor(Math.random() * 10) + 1;
     this.word = this.arrayWords[this.randomNumber];
     this.getHint();
-    this.takeSolution();
-    this.takeCorrectLettersLength();
+    this.getSolution();
+    this.getCorrectLettersLength();
   }
 
-  checkIfGameIsOver() {
+  isGameOver() {
     if (this.counterCorrectLetters === this.solution.length) {
       alert('Has ganado');
-      this.newGame();
+      this.setNewGame();
     }
     if (this.counterWrongLetters === 9) {
       alert('Has perdido');
-      this.newGame();
+      this.setNewGame();
     }
   }
 
   ngOnInit(): void {
     this.getHint();
-    this.takeSolution();
-    this.takeCorrectLettersLength();
+    this.getSolution();
+    this.getCorrectLettersLength();
   }
 }
