@@ -24,29 +24,29 @@ export class AppComponent implements OnInit {
 
   word: Word = this.arrayWords[this.generateRandomNumber(this.arrayWords.length)];
 
-  getHint() {
-    this.hint = this.word.hint;
+  getHint(): string {
+    return this.hint = this.word.hint;
   }
 
-  resetInputValue() {
+  resetInputValue(): string {
     let inputLetter = document.getElementById('input-letter') as HTMLInputElement;
-    inputLetter.value = '';
+    return inputLetter.value = '';
   }
 
-  getSolution() {
+  getSolution(): string[] {
     let name = this.word.name.toUpperCase();
-    this.solution = name.split('');
+    return this.solution = name.split('');
   }
 
-  getCorrectLettersLength() {
-    this.correctLetters.length = this.solution.length;
+  getCorrectLettersLength(): number {
+    return this.correctLetters.length = this.solution.length;
   }
 
   isLetterRepeated(letter: string): boolean{
     return this.correctLetters.includes(letter) || this.wrongLetters.includes(letter);
   }
 
-  checkLetter = (letter: string) => {
+  checkLetter = (letter: string): void => {
     if (letter === '' || letter === undefined) {
       return alert('Introduce una letra');
     }
@@ -72,7 +72,7 @@ export class AppComponent implements OnInit {
     this.resetInputValue();
   }
 
-  setNewGame() {
+  setNewGame(): void {
     this.counterCorrectLetters = 0;
     this.counterWrongLetters = 0;
     this.correctLetters = [];
@@ -84,7 +84,7 @@ export class AppComponent implements OnInit {
     this.getCorrectLettersLength();
   }
 
-  isGameOver() {
+  isGameOver(): void {
     if (this.counterCorrectLetters === this.solution.length) {
       alert('Has ganado');
       this.setNewGame();
