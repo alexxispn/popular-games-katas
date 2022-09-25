@@ -1,4 +1,4 @@
-.hangman{
+.hangman {
   border: 2px #ccc dashed;
   width: 40rem;
   height: 10rem;
@@ -6,30 +6,34 @@
   display: flex;
   align-items: center;
   gap: 5rem;
-  .hangman__img{
+
+  &__img {
     width: 8rem;
     height: 8rem;
   }
-  .hangman__mistakes{
+
+  &__mistakes {
     display: flex;
     gap: 1rem;
-    .mistakes__letter{
-      font-size: 2rem;
-      position: relative;
-      .mistakes__letter--line{
-        position: absolute;
-        top: 1.2rem;
-        right: -0.6rem;
-        transform: rotate(-45deg);
-        width: 200%;
-        height: 1px;
-        background: red;
-      }
-    }
   }
 }
 
-.clue{
+.mistakes-letter {
+  font-size: 2rem;
+  position: relative;
+
+  &--line {
+    position: absolute;
+    top: 1.2rem;
+    right: -0.6rem;
+    transform: rotate(-45deg);
+    width: 200%;
+    height: 1px;
+    background: red;
+  }
+}
+
+.clue {
   background: #FFF375;
   width: 40rem;
   height: 5rem;
@@ -37,30 +41,31 @@
   border-radius: 0.3rem;
 }
 
-.solution{
+.solution {
   width: 40rem;
   height: 2rem;
   padding: 1rem;
   display: flex;
   gap: 3rem;
   justify-content: center;
-}
-.solution__div {
-  width: 4rem;
-  height: 1.5rem;
-  display: flex;
-  place-content: center;
-  border-bottom: 2px solid #ccc;
+
+  &__div {
+    width: 4rem;
+    height: 1.5rem;
+    display: flex;
+    place-content: center;
+    border-bottom: 2px solid #ccc;
+  }
 }
 
-.check-input{
+.check-input {
   width: 20rem;
   height: 2rem;
   border-radius: 0.3rem;
   padding: 0 1rem;
 }
 
-.check-button{
+.check-button {
   background: black;
   color: white;
   padding: 0.5rem;

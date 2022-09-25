@@ -3,9 +3,9 @@
   <img class="hangman__img" src="assets/hangman-attempt-{{counterWrongLetters}}.svg" alt="Ahorcado"
        *ngIf="counterWrongLetters">
   <div class="hangman__mistakes">
-    <div class="mistakes__letter" *ngFor="let letter of wrongLetters">
+    <div class="mistakes-letter" *ngFor="let letter of wrongLetters">
       <p>{{letter}}</p>
-      <span class="mistakes__letter--line"></span>
+      <span class="mistakes-letter--line"></span>
     </div>
   </div>
 </div>
