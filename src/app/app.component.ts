@@ -10,7 +10,7 @@ import {Word} from './interfaces/word';
 
 export class AppComponent implements OnInit {
   title = 'popular-games-katas';
-  clue: string = '';
+  hint: string = '';
   solution: string[] = [];
   correctLetters: string[] = [];
   wrongLetters: string[] = [];
@@ -24,8 +24,8 @@ export class AppComponent implements OnInit {
 
   word: Word = this.arrayWords[this.generateRandomNumber(this.arrayWords.length)];
 
-  takeClue() {
-    this.clue = this.word.clue;
+  getHint() {
+    this.hint = this.word.hint;
   }
 
   resetInputValue() {
@@ -71,7 +71,7 @@ export class AppComponent implements OnInit {
     this.wrongLetters = [];
     this.randomNumber = Math.floor(Math.random() * 10) + 1;
     this.word = this.arrayWords[this.randomNumber];
-    this.takeClue();
+    this.getHint();
     this.takeSolution();
     this.takeCorrectLettersLength();
   }
@@ -88,7 +88,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.takeClue();
+    this.getHint();
     this.takeSolution();
     this.takeCorrectLettersLength();
   }
