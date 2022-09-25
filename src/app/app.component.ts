@@ -42,9 +42,17 @@ export class AppComponent implements OnInit {
     this.correctLetters.length = this.solution.length;
   }
 
+  isLetterRepeated(letter: string): boolean{
+    return this.correctLetters.includes(letter) || this.wrongLetters.includes(letter);
+  }
+
   checkLetter = (letter: string) => {
     if (letter === '' || letter === undefined) {
       return alert('Introduce una letra');
+    }
+    if (this.isLetterRepeated(letter)) {
+      this.resetInputValue();
+      return alert('La letra ya ha sido introducida');
     }
     letter = letter.toUpperCase();
     let letterIsCorrect = this.solution.includes(letter);
@@ -53,13 +61,12 @@ export class AppComponent implements OnInit {
       this.counterWrongLetters++;
     }
     else {
-      let lettersCorrectInSolution = this.solution.filter((solutionLetter) => solutionLetter === letter).length;
-      for (let i = 0; i < lettersCorrectInSolution; i++) {
-        let index = this.solution.indexOf(letter);
-        this.correctLetters[index] = letter;
-        this.solution[index] = '';
-        this.counterCorrectLetters++;
-      }
+      this.solution.forEach((solutionLetter, index) => {
+        if (solutionLetter === letter) {
+          this.correctLetters[index] = letter;
+          this.counterCorrectLetters++;
+        }
+      });
     }
     this.isGameOver();
     this.resetInputValue();
